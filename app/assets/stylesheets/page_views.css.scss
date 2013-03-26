@@ -1,0 +1,60 @@
+// Place all the styles related to the PageView controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
+}
+.gap {
+  border-right: 0px solid rgb(192, 195, 198);
+  height: 14px;
+  margin: 1px 0;
+  width: 45px;
+}
+
+.entry {
+  .entry-box {
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+    cursor: default;
+    line-height: 1.75em;
+    margin-bottom: 6px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .time {
+    font-size: 75%;
+    color: rgb(151, 156, 160);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 110px;
+  }
+
+  .title {
+    padding-left: 20px;
+    background-repeat: no-repeat;
+    background-image: url(/assets/default.png);
+    background-position: 0 3px;
+    font-size: 75%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 600px;
+    & > a {
+      color: rgb(48, 57, 66);
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .domain {
+    color: #979CA0;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 75%;
+  }
+}

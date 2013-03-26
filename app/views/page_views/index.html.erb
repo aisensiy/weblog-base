@@ -1,0 +1,31 @@
+<div class="span12">
+  <ul class="unstyled">
+  <% @page_views.each do |page_view| %>
+    <li class="entry">
+      <label for="" class="entry-box">
+        <div class="time" datetime="<%= page_view.start_time %>"></div>
+        <!-- <div class="time" datetime="<%= page_view.end_time %>"></div> -->
+        <div class="title"
+          <% if domain page_view.url %>
+          style="background-image: url(http://www.google.com/s2/favicons?domain=<%= domain page_view.url %>)"
+          <% end %>
+        >
+          <a href="<%= page_view.url %>" target="_blank">
+            <% if not page_view.title.empty? %>
+              <%= page_view.title %>
+            <% else %>
+              <%= page_view.url %>
+            <% end %>
+          </a>
+        </div>
+        <% if domain page_view.url %>
+          <div class="domain"><%= domain page_view.url %></div>
+        <% end %>
+        <div class="duration"><%= human_time page_view.duration %></div>
+      </label>
+    </li>
+  <% end %>
+  </ul>
+
+  <%= will_paginate @page_views %>
+</div>

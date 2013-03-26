@@ -9,7 +9,7 @@
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
     <![endif]-->
 
     <%= stylesheet_link_tag "application", :media => "all" %>
@@ -45,38 +45,54 @@
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="#">NewWeblogBase</a>
-          <div class="container nav-collapse">
+          <div class="nav-collapse collapse">
             <ul class="nav">
               <li><%= link_to "Link1", "/path1"  %></li>
               <li><%= link_to "Link2", "/path2"  %></li>
               <li><%= link_to "Link3", "/path3"  %></li>
             </ul>
           </div><!--/.nav-collapse -->
+          <div class="nav-collapse collapse pull-right">
+            <ul class="nav">
+              <li><a href="/requests">提醒</a></li>
+              <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="个人主页">
+                <span class="headerTinymanName">aisensiy <b class="caret"></b></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="/users/1">个人资料</a></li>
+                <li><a href="/users/1/edit">个人资料设置</a></li>
+                <li class="divider"></li>
+                <li><a href="/sign_out" data-method="delete" rel="nofollow">退出</a></li>
+              </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="container">
-        <div class="row">
-          <div class="span9">
-            <%= bootstrap_flash %>
-            <%= yield %>
-          </div>
-          <div class="span3">
-            <div class="well sidebar-nav">
-              <h3>Sidebar</h3>
-              <ul class="nav nav-list">
-                <li class="nav-header">Sidebar</li>
-                <li><%= link_to "Link1", "/path1"  %></li>
-                <li><%= link_to "Link2", "/path2"  %></li>
-                <li><%= link_to "Link3", "/path3"  %></li>
-              </ul>
-            </div><!--/.well -->
-          </div><!--/span-->
-        </div><!--/row-->
+      <div class="row">
+        <div class="span9">
+          <%= bootstrap_flash %>
+          <%= yield %>
+        </div>
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <h3>Sidebar</h3>
+            <ul class="nav nav-list">
+              <li class="nav-header">Sidebar</li>
+              <li><%= link_to "Link1", "/path1"  %></li>
+              <li><%= link_to "Link2", "/path2"  %></li>
+              <li><%= link_to "Link3", "/path3"  %></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+      </div><!--/row-->
 
       <footer>
-        <p>&copy; Company 2012</p>
+      <p>&copy; Company 2012</p>
       </footer>
 
     </div> <!-- /container -->
