@@ -1,8 +1,8 @@
 NewWeblogBase::Application.routes.draw do
-  resources :page_views, only: [:index] do
-    get "create", on: :member
-  end
+  resources :page_views, only: [:index]
+
   devise_for :users
-  match "/api/uploaddata" => "page_views#create"
+
   root to: "page_views#index"
+  match "/api/uploaddata" => "page_views#create"
 end

@@ -3,6 +3,8 @@ class PageViewsController < ApplicationController
 
   def create
     @page_view = current_user.page_views.build(params[:page_view])
+    # params[:page_view][:start_time] = Time.at(params[:page_view][:start_time].to_i / 1000.0)
+    # params[:page_view][:end_time] = Time.at(params[:page_view][:end_time].to_i / 1000.0)
     last_page_view = current_user.page_views.order("start_time DESC").first
     if (not last_page_view.nil?) &&
        last_page_view.url == @page_view.url &&
@@ -16,7 +18,7 @@ class PageViewsController < ApplicationController
         format.json { render json: last_page_view, status: :updated}
       end
     else
-      @page_view.save
+      @page_view.save!
       respond_to do |format|
         format.json { render json: @page_view, status: :created}
       end

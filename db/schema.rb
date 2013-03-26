@@ -11,14 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130326041949) do
+ActiveRecord::Schema.define(:version => 20130326074023) do
 
   create_table "page_views", :force => true do |t|
     t.string   "title",      :limit => 1023
     t.string   "url",        :limit => 1023
-    t.float    "start_time"
+    t.datetime "start_time"
     t.integer  "duration"
-    t.float    "end_time"
+    t.datetime "end_time"
     t.string   "status"
     t.integer  "user_id"
     t.datetime "created_at",                 :null => false

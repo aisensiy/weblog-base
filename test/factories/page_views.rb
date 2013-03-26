@@ -3,11 +3,10 @@
 FactoryGirl.define do
   factory :page_view do
     title "MyString"
-    url "MyString"
-    start_time 1.5
-    duration 1
-    end_time 1.5
-    status "MyString"
-    user_id 1
+    url "http://example.com"
+    start_time '1364282802309'
+    end_time   '1364282807309'
+    duration 3000
+    user
   end
 end

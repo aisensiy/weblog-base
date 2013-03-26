@@ -3,8 +3,7 @@
   <% @page_views.each do |page_view| %>
     <li class="entry">
       <label for="" class="entry-box">
-        <div class="time" datetime="<%= page_view.start_time %>"></div>
-        <!-- <div class="time" datetime="<%= page_view.end_time %>"></div> -->
+        <div class="time" datetime="<%= page_view.start_time.to_f * 1000 %>"></div>
         <div class="title"
           <% if domain page_view.url %>
           style="background-image: url(http://www.google.com/s2/favicons?domain=<%= domain page_view.url %>)"

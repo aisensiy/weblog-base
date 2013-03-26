@@ -29,12 +29,12 @@ gem 'factory_girl_rails'
 gem 'will_paginate'
 
 gem 'quiet_assets', group: :development
-gem 'shoulda', group: :test
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
+gem 'thin'
 
 # Use unicorn as the app server
 # gem 'unicorn'
