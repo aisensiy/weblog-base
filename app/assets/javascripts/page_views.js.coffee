@@ -30,7 +30,7 @@ $ ->
     # start_of_day.hours 0
 
     $(elem).text(human_readable_format($(elem).attr('datetime')))
-    console.log last_time_stamp
+    # console.log last_time_stamp
     if last_time_stamp && last_time_stamp - $(elem).attr('datetime') > 1000 * 60 * 10
       $(elem).closest('.entry').before('<li class="gap"></li>')
     last_time_stamp = $(elem).attr('datetime')
