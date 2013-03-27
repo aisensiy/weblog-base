@@ -24,9 +24,12 @@ end
 gem 'jquery-rails'
 gem "twitter-bootstrap-rails"
 gem 'devise'
+gem 'omniauth-weibo-oauth2'
 gem 'simple_form'
 gem 'factory_girl_rails'
 gem 'will_paginate'
+
+gem 'rails_config'
 
 gem 'quiet_assets', group: :development
 # To use ActiveModel has_secure_password
