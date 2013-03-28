@@ -1,6 +1,6 @@
 class PageView < ActiveRecord::Base
   attr_accessible :duration, :end_time, :start_time, :status, :title, :url, :user_id
-
+  default_scope order('start_time DESC')
   belongs_to :user
 
   def start_time=(timestamp)

@@ -11,9 +11,9 @@
         >
           <a href="<%= page_view.url %>" target="_blank">
             <% if not page_view.title.empty? %>
-              <%= page_view.title %>
+              <%= highlight page_view.title, params[:term] %>
             <% else %>
-              <%= page_view.url %>
+              <%= highlight page_view.url, params[:term] %>
             <% end %>
           </a>
         </div>
